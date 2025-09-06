@@ -175,7 +175,7 @@ input, select, textarea {
 	}
 
 	h1, h2, h3, h4, h5, h6 {
-		color: #ffffff;
+		color: #3bba9c;
 		font-weight: bold;
 		line-height: 1.5;
 		margin: 0 0 0.5em 0;
@@ -3377,7 +3377,7 @@ input, select, textarea {
 
 		#header > .title {
 			border: 0;
-			color: #3bba9c;
+			color: #ffffff;
 			display: block;
 			font-size: 1.25em;
 			font-weight: bold;
