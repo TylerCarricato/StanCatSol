@@ -98,7 +98,7 @@ input, select, textarea {
 	}
 
 	body {
-		background: #2E3047;
+		background: #2c2e43;
 	}
 
 		body.is-preload *, body.is-preload *:before, body.is-preload *:after {
@@ -3240,7 +3240,7 @@ input, select, textarea {
 		}
 
 		.wrapper.style1 {
-			background-color: #2E3047;
+			background-color: #2c2e43;
 		}
 
 		.wrapper.style1-alt {
@@ -3490,35 +3490,68 @@ input, select, textarea {
 	}
 
 /* Footer */
+#footer {
+    background-color: #3c3f58; /* base color behind wave */
+    background: url("images/waves.svg") no-repeat bottom center;
+    background-size: 100% auto;           /* full width, keep aspect ratio */
+    background-position: bottom -40px center; /* crop top of wave if needed */
+    position: relative;
+    z-index: 1;
+    padding-top: 3rem;   /* optional spacing above footer content */
+    padding-bottom: 3rem; /* optional spacing below content */
+}
 
-	#sidebar + #wrapper + #footer {
-		margin-left: 18em;
-	}
+/* Links inside footer */
+#footer > .inner a {
+    border-bottom-color: rgba(255, 255, 255, 0.15);
+    color: inherit; /* inherit text color */
+    text-decoration: none;
+}
 
-		@media screen and (max-width: 1280px) {
+#footer > .inner a:hover {
+    border-bottom-color: transparent;
+    color: #ffffff; /* optional hover color */
+}
 
-			#sidebar + #wrapper + #footer {
-				margin-left: 0;
-			}
+/* Footer menu text */
+#footer > .inner .menu {
+    font-size: 0.8em;
+    color: rgba(255, 255, 255, 0.15);
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* center horizontally */
+    gap: 1rem;
+}
 
-		}
+/* Center inner footer content */
+#header + #wrapper + #footer > .inner {
+    margin: 0 auto;
+    max-width: 1200px;
+    text-align: center;
+}
 
-	#footer > .inner a {
-		border-bottom-color: rgba(255, 255, 255, 0.15);
-	}
+/* Responsive adjustments */
+@media screen and (max-width: 1280px) {
+    #sidebar + #wrapper + #footer {
+        margin-left: 0;
+    }
+}
 
-		#footer > .inner a:hover {
-			border-bottom-color: transparent;
-		}
-
-	#footer > .inner .menu {
-		font-size: 0.8em;
-		color: rgba(255, 255, 255, 0.15);
-	}
-
-	#header + #wrapper + #footer > .inner {
-		margin: 0 auto;
-	}
+/* Optional: add subtle shadow or overlay for wave */
+#footer::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.05); /* slight dark overlay to enhance contrast */
+    pointer-events: none;
+    z-index: 0;
+}
 
 /* Sidebar */
 
